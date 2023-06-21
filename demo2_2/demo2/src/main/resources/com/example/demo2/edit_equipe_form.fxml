@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.EditEquipeFormController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <VBox prefHeight="177.0" prefWidth="305.0" spacing="10">
+        <Label text="Edit Equipe" />
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+            </rowConstraints>
+
+            <Label text="ID:" GridPane.rowIndex="0" />
+            <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Nom:" GridPane.rowIndex="1" />
+            <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Date de création:" GridPane.rowIndex="2" />
+            <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Entraîneur:" GridPane.rowIndex="3" />
+            <TextField fx:id="entraineurField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        </GridPane>
+
+        <HBox spacing="10">
+            <Button onAction="#updateEquipe" text="Update" />
+            <Button onAction="#close" text="Cancel" />
+        </HBox>
+    </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
